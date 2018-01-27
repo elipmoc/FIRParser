@@ -12,5 +12,11 @@ namespace UnitTestProject1
         {
             OpCodeAst hoge=AstParser.Parse("output 111");
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual(new OpCodeAst("output", new ConstantIntValueAst(111)), hoge);
+        }
     }
 }
