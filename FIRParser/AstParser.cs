@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FIRParser.Ast;
 
 namespace FIRParser
 {
@@ -10,7 +11,7 @@ namespace FIRParser
     {
         public static Ast.OpCodeAst Parse(string str)
         {
-            return new Ast.OpCodeAst();
+            return new Ast.OpCodeAst("output",new ValueAst[] { new ConstantIntValueAst(111) });
         }
     }
 }

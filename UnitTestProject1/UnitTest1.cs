@@ -16,7 +16,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod2()
         {
-            var hoge1=new OpCodeAst("output",new ValueAst[]{ new ConstantIntValueAst(111)});
+            new OpCodeAst("output",new ValueAst[]{ new ConstantIntValueAst(111)});
         }
     }
 }

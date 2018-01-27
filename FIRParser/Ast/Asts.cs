@@ -8,10 +8,18 @@ namespace FIRParser.Ast
 {
     public class OpCodeAst
     {
+        public OpCodeAst(string opName,ValueAst[] valueAstArray)
+        {
+
+        }
+    }
+
+    public interface ValueAst
+    {
 
     }
 
-    public class ConstantIntValueAst
+    public class ConstantIntValueAst: ValueAst
     {
         public ConstantIntValueAst(int value)
         {
