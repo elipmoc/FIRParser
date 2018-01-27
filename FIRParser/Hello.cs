@@ -10,7 +10,7 @@ namespace FIRParser
     {
         public Hello()
         {
-            Console.WriteLine("hello!");
+            Console.WriteLine("hello!2");
         }
     }
 }
