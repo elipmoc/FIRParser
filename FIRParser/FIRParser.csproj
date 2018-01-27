@@ -40,8 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FIRParser.g4.lexer.cs">
+      <DependentUpon>FIRParser.g4</DependentUpon>
+    </Compile>
+    <Compile Include="FIRParser.g4.parser.cs">
+      <DependentUpon>FIRParser.g4</DependentUpon>
+    </Compile>
     <Compile Include="Hello.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Antlr4 Include="FIRParser.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>FIRParser</CustomToolNamespace>
+    </Antlr4>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
