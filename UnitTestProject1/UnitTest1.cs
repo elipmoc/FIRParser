@@ -16,7 +16,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.AreEqual(new OpCodeAst("output", new ConstantIntValueAst(111)), hoge);
+            Assert.AreEqual(new OpCodeAst("output", new ConstantIntValueAst(111)), AstParser.Parse("output 111"));
         }
     }
 }
