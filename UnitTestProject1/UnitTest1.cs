@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FIRParser;
+using FIRParser.Ast;
 namespace UnitTestProject1
 {
     [TestClass]
@@ -9,7 +10,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            Ast.OpCodeAst hoge=Parser.Parse("output 111");
+            OpCodeAst hoge=Parser.Parse("output 111");
         }
     }
 }
