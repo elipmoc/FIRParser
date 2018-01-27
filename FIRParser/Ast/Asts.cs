@@ -10,4 +10,12 @@ namespace FIRParser.Ast
     {
 
     }
+
+    public class ConstantIntValueAst
+    {
+        public ConstantIntValueAst(int value)
+        {
+
+        }
+    }
 }
