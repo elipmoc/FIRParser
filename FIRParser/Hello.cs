@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FIRParser
 {
-    public class Class1
+    public class Hello
     {
+        public Hello()
+        {
+            Console.WriteLine("hello!");
+        }
     }
 }
