@@ -13,7 +13,7 @@ namespace FIRParser.Ast
     }
 
     //一行を意味する抽象構文木
-    public interface OneLineAst
+    public interface OneLineAst:BaseAst
     {
 
     }
