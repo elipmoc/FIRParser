@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ast\Asts.cs" />
     <Compile Include="FIRParser.g4.lexer.cs">
       <DependentUpon>FIRParser.g4</DependentUpon>
     </Compile>
@@ -54,6 +55,8 @@
       <DependentUpon>FIRParser.g4</DependentUpon>
     </Compile>
     <Compile Include="Hello.cs" />
+    <Compile Include="AstParser.cs" />
+    <Compile Include="ParseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

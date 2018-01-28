@@ -5,7 +5,7 @@ grammar FIRParser;
  */
 
 compileUnit
-	:	EOF
+	:	'hoge'
 	;
 
 /*

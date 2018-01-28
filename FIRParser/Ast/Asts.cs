@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace FIRParser.Ast
 {
-    public class OpCodeAst
+
+    public interface BaseAst
+    {
+
+    }
+
+    //一行を意味する抽象構文木
+    public interface OneLineAst
+    {
+
+    }
+
+    public class OpCodeAst:OneLineAst
     {
         public OpCodeAst(string opName,ValueAst[] valueAstArray)
         {
