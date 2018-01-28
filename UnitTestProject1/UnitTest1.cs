@@ -16,7 +16,10 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod2()
         {
-            new OpCodeAst("output",new ValueAst[]{ new ConstantIntValueAst(111)});
+            new OpCodeAst("output", new ValueAst[] { new ConstantIntValueAst(111) });
+            new OpCodeAst("output", new ValueAst[] { new ConstantDoubleValueAst(3.14) });
+            new OpCodeAst("output", new ValueAst[] { new ConstantCharValueAst('c') });
+            new OpCodeAst("output",new ValueAst[]{ new ConstantBoolValueAst(true)});
         }
     }
 }
