@@ -10,7 +10,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            OpCodeAst hoge=AstParser.Parse("output 111");
+            ParseResult hoge=AstParser.Parse("output 111");
         }
 
         [TestMethod]
