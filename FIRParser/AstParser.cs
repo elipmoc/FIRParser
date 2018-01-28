@@ -9,9 +9,10 @@ namespace FIRParser
 {
     public static class AstParser
     {
-        public static Ast.OpCodeAst Parse(string str)
+        public static ParseResult Parse(string str)
         {
-            return new Ast.OpCodeAst("output",new ValueAst[] { new ConstantIntValueAst(111) });
+            var enterAst = new Ast.OpCodeAst("output", new ValueAst[] { new ConstantIntValueAst(111) });
+            return new ParseResult(enterAst,true,null);
         }
     }
 }
