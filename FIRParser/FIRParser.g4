@@ -103,7 +103,7 @@ StringLiteral
 
 //sizeof
 sizeof
-	: 'sizeof<' '>'
+	: 'sizeof<' primitiveType '>'
 	;
 
 //0à¯êîñΩóﬂ
