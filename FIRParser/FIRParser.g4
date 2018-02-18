@@ -33,7 +33,7 @@ order
 
 //型
 type
-	:typeModifier* primitiveType starModifier* arrayModifier*
+	:(typeModifier Space)* primitiveType starModifier* arrayModifier*
 	;
 
 //プリミティブ型

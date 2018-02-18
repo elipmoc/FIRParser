@@ -27,7 +27,7 @@ namespace UnitTestProject1
             var parser = new FIRParserParser(commonTokenStream);
             parser.AddErrorListener(new errorListener<IToken>());
             var graphContext = parser.programBody();
-        } 
+        }
 
         [TestMethod]
         public void TestMethod1()
@@ -78,12 +78,25 @@ output %temp");
         [TestMethod]
         public void ErrorTest1()
         {
-            try { TestParser("input 810");
+            try
+            {
+                TestParser("input 810");
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 return;
             }
             throw new Exception("ここにたどり着くのはおかしい");
+        }
+
+        [TestMethod]
+        public void SizeofTest()
+        {
+            TestParser("output sizeof<int>");
+            TestParser("output sizeof<bool>");
+            TestParser($@"int hoge
+%hoge=sizeof<bool>
+%hoge=add sizeof<bool> sizeof<int>");
         }
     }
 }
