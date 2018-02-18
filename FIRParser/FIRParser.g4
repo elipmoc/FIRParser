@@ -3,7 +3,7 @@ grammar FIRParser;
 
 //プログラムボディ
 programBody
-	:(statement '\r\n')* statement
+	:(statement '\r\n')* statement EOF
 	;
 
 //ステートメント
