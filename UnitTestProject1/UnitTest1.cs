@@ -108,8 +108,7 @@ output %temp");
 %hoge=true
 %hoge=false
 %hoge='c'
-%hoge=3.14
-");
+%hoge=3.14");
         }
     }
 }

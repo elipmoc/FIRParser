@@ -78,7 +78,7 @@ Id
 
 //リテラル値
 literal
-	: IntNum| CharLiteral|StringLiteral|sizeof
+	: IntNum|RealNum| CharLiteral|StringLiteral|boolLiteral|sizeof
 	;
 
 //スペース
@@ -91,6 +91,11 @@ IntNum
 	:[0-9]+
 	;
 
+//実数
+RealNum
+	:[0-9]+'.'[0-9]+
+	;
+
 //文字
 CharLiteral
 	:'\'' . '\''
@@ -99,6 +104,11 @@ CharLiteral
 //文字列
 StringLiteral
 	: '"' .* '"'
+	;
+
+//真偽値
+boolLiteral
+	:'true'|'false'
 	;
 
 //sizeof
