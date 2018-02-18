@@ -98,5 +98,18 @@ output %temp");
 %hoge=sizeof<bool>
 %hoge=add sizeof<bool> sizeof<int>");
         }
+
+        [TestMethod]
+        public void LiteralTest()
+        {
+            TestParser($@"int hoge
+%hoge=""fuga""
+%hoge=114514
+%hoge=true
+%hoge=false
+%hoge='c'
+%hoge=3.14
+");
+        }
     }
 }
