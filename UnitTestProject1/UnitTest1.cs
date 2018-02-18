@@ -34,5 +34,24 @@ namespace UnitTestProject1
         {
             TestParser("input");
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            TestParser(
+                $@"
+                int x
+                %x=5
+                int temp
+                %temp=1
+                bool flag
+                label loop
+                % temp = mul % temp % x
+                % x = sub % x 1
+                % flag = equal % x 1
+                if_jump % flag @end @loop
+                @end
+                output temp");
+        }
     }
 }
