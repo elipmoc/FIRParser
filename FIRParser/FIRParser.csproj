@@ -48,15 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ast\Asts.cs" />
-    <Compile Include="FIRParser.g4.lexer.cs">
-      <DependentUpon>FIRParser.g4</DependentUpon>
-    </Compile>
-    <Compile Include="FIRParser.g4.parser.cs">
-      <DependentUpon>FIRParser.g4</DependentUpon>
-    </Compile>
-    <Compile Include="Hello.cs" />
-    <Compile Include="AstParser.cs" />
-    <Compile Include="ParseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,8 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>FIRParser</CustomToolNamespace>
     </Antlr4>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
