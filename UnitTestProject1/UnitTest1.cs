@@ -52,5 +52,16 @@ if_jump %flag @end @loop
 label end
 output %temp");
         }
+
+        [TestMethod]
+        public void ErrorTest1()
+        {
+            try { TestParser("input 810");
+            }
+            catch(Exception e) {
+                return;
+            }
+            throw new Exception("ここにたどり着くのはおかしい");
+        }
     }
 }
