@@ -110,5 +110,14 @@ output %temp");
 %hoge='c'
 %hoge=3.14");
         }
+
+        [TestMethod]
+        public void StructTest()
+        {
+            TestParser($@"{{int:foo,const char*[4545]:var}} Hoge
+struct Hoge hoge
+output %hoge.foo
+%hoge.foo=810");
+        }
     }
 }
