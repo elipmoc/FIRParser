@@ -54,6 +54,28 @@ output %temp");
         }
 
         [TestMethod]
+        public void TypeTest()
+        {
+            TestParser("int hoge");
+            TestParser("double hoge");
+            TestParser("bool hoge");
+            TestParser("char hoge");
+            TestParser("pointer hoge");
+
+            TestParser("const int hoge");
+            TestParser("static const double hoge");
+            TestParser("bool* hoge");
+            TestParser("char[] hoge");
+            TestParser("pointer** hoge");
+
+            TestParser("const int**[45] hoge");
+            TestParser("double[][5][3] hoge");
+            TestParser("static const bool*[][] hoge");
+            TestParser("char[1][2][3][4] hoge");
+            TestParser("static pointer****** hoge");
+        }
+
+        [TestMethod]
         public void ErrorTest1()
         {
             try { TestParser("input 810");
