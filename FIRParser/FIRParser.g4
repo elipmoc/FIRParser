@@ -3,7 +3,7 @@ grammar FIRParser;
 
 //プログラムボディ
 programBody
-	:statement*
+	:(statement '\r\n')* statement
 	;
 
 //ステートメント
@@ -18,12 +18,12 @@ variableDef
 
 //代入
 assignment
-	: variable '=' value
+	: variable '=' (value|order)
 	;
 
 //ラベル宣言
 labelDef
-	: 'label' Space label
+	: 'label' Space Id
 	;
 
 //命令
